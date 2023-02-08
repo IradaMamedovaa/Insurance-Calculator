@@ -1,0 +1,26 @@
+@use '../../assets/style/variables.scss' as variables;
+
+.countSection{
+  background-color: variables.$second-color;
+  .title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    p{
+      margin: 0;
+    }
+  }
+  .count{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    button{
+        width: 2rem;
+        height: 2rem;
+        background-color: variables.$second-color;
+        border: 1px solid variables.$base-color;
+        border-radius: 4px;
+    }
+  }
+}

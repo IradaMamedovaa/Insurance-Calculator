@@ -1,0 +1,10 @@
+@use "../../assets/style/variables.scss" as variables;
+
+.header {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: variables.$third-color;
+  background-color: variables.$base-color;
+  text-align: center;
+}

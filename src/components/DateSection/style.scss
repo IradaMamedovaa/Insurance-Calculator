@@ -1,0 +1,24 @@
+@use "../../assets/style/variables.scss" as variables;
+
+.DateSection {
+  margin-bottom: 1rem;
+  background-color: variables.$second-color;
+  .title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    p{
+      margin: 0;
+    }
+  }
+}
+.datePickers{
+  display: flex;
+  gap: 1rem;
+  fieldset{
+    border: 1px solid variables.$base-color;
+  }
+}
+.datePicker>div{
+  height: 2rem;
+}

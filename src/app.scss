@@ -1,0 +1,39 @@
+@use "./assets/style/variables.scss" as variables;
+
+
+.App {
+  width: 30rem;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: variables.$third-color
+}
+
+.form{
+  padding: 1rem ;
+  padding-bottom: 3rem;
+  background-color: variables.$second-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .calcBtn{
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid variables.$base-color;
+    background-color: variables.$second-color;
+    color: variables.$third-color;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    &:hover{
+      background-color: variables.$base-color;
+    }
+    &:active{
+    background-color: variables.$active-color;
+  }
+  }
+  
+
+}
+
