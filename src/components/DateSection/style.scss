@@ -1,4 +1,5 @@
 @use "../../assets/style/variables.scss" as variables;
+@import "../../assets/style/mixins.scss";
 
 .DateSection {
   margin-bottom: 1rem;
@@ -21,4 +22,10 @@
 }
 .datePicker>div{
   height: 2rem;
+}
+
+@include sm {
+  .datePickers{
+    flex-direction: column;
+  }
 }

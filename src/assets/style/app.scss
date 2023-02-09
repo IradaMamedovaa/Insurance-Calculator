@@ -1,4 +1,5 @@
-@use "./assets/style/variables.scss" as variables;
+@use "./variables.scss" as variables;
+@import "./mixins.scss";
 
 
 .App {
@@ -6,9 +7,14 @@
   margin: 0 auto;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  color: variables.$third-color
+  color: variables.$third-color;
 }
-
+body{
+  margin: 0;
+}
+#root{
+  overflow: hidden;
+}
 .form{
   padding: 1rem ;
   padding-bottom: 3rem;
@@ -37,3 +43,9 @@
 
 }
 
+@include sm{
+  .App{
+    width: 100vw;
+    min-width: 300px;
+  }
+}

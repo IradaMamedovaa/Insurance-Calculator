@@ -1,4 +1,5 @@
 @use "../../assets/style/variables.scss" as variables;
+@import "../../assets/style/mixins.scss";
 
 .buttonGroup {
   margin-bottom: 1rem;
@@ -43,5 +44,12 @@ ul {
     input:checked + label {
       background: variables.$base-color;
     }
+  }
+}
+
+
+@include sm{
+  ul{
+    flex-direction: column;
   }
 }
