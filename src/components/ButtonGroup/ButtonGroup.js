@@ -1,6 +1,10 @@
 import React from "react";
 import "./style.scss";
-const ButtonGroup = ({ title, variants, onChange }) => {
+const ButtonGroup = ({ title, variants, required, handleState }) => {
+  const handleChange = (variant) => {
+      handleState(title.replace(/\?/g, ""),(variant))
+    }
+
   return (
     <div className="buttonGroup">
       <div className="title">
@@ -13,12 +17,12 @@ const ButtonGroup = ({ title, variants, onChange }) => {
               type="radio"
               name={title}
               id={variant}
-              required={index === 0 && true}
-              onChange={(e)=> onChange(e)}
+              required={index === 0 &&required && true}
+              onChange={()=> handleChange(variant)}
             />
             <label htmlFor={variant}>{variant}</label>
           </li>
-        ))}
+        ))} 
       </ul>
     </div>
   );

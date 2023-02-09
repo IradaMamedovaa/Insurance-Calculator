@@ -5,14 +5,16 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-const DateSection = ({ handlePeriod }) => {
+const DateSection = ({ handleState, insurancetype }) => {
   const [startValue, setStartValue] = React.useState(null);
   const [endValue, setEndValue] = React.useState(null);
 
   const handleSelect = (start, end) => {
-    if (startValue != null || endValue != null) {
+    if(insurancetype==='Annual insurance' && start != null){
+      handleState('Period',1)
+    }else if (startValue != null || endValue != null) {
       const period = (end - start) / (1000 * 3600 * 24);
-      handlePeriod(period);
+      handleState('Period',period);
     }
   };
   return (
